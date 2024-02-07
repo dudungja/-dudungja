@@ -54,6 +54,7 @@
         background-color: $body-background-color;
         border-bottom: $border $border-color;
     }
+    
     &.nav-open {
         display: block;
         @include mq(md) {
