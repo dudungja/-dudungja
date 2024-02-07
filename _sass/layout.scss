@@ -34,6 +34,7 @@
 
 .main-content-wrap {
     @include container;
+    
     padding-top: $gutter-spacing-sm;
     padding-bottom: $gutter-spacing-sm;
     @include mq(md) {
@@ -72,6 +73,7 @@
 
 .site-nav {
     display: none;
+
     &.nav-open {
         display: block;
     }
@@ -97,6 +99,7 @@
 
 .site-title {
     @include container;
+
     flex-grow: 1;
     display: flex;
     height: 100%;
@@ -157,6 +160,7 @@ body {
 // stylelint-enable selector-max-type
 .site-footer {
     @include container;
+
     position: absolute;
     bottom: 0;
     left: 0;
