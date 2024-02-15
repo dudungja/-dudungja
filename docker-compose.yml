@@ -1,14 +1,9 @@
-version: "3.5"
-
+version: "3.8"
 services:
   jekyll:
-    build:
-      context: ./
+    build: .
+    platform: linux/amd64
     ports:
-      - 4000:4000
+      - "4000:4000"
     volumes:
-      - .:/usr/src/app
-    stdin_open: true
-    tty: true
-    command: bundle exec jekyll serve -H 0.0.0.0 -t
-
+      - .:/srv/jekyll

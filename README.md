@@ -1,110 +1,88 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
-</p>
-<br><br>
-<p align="center">
-    <h1 align="center">Just the Docs</h1>
-    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://just-the-docs.com/">See it in action!</a></strong></p>
-    <br><br><br>
-</p>
+# { Personal } Jekyll Theme
 
-<p align="center">A video walkthrough of various Just the Docs features</p>
+{ Personal } is a free responsive blog with minimal aesthetic, about you. You
+can watch it live [here](https://le4ker.github.io/personal-jekyll-theme/).
 
-https://user-images.githubusercontent.com/85418632/211225192-7e5d1116-2f4f-4305-bb9b-437fe47df071.mp4
+![mobile](https://github.com/le4ker/personal-jekyll-theme/raw/main/.github/img/mobile.gif)
 
-## Installation
+![desktop](https://github.com/le4ker/personal-jekyll-theme/raw/main/.github/img/desktop.gif)
 
-### Use the template
+## Deploy on Github Pages
 
-The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
+Fork the repository and rename the forked repository to
+`yourusername.github.io`. Then update the `url` and `baseurl` (set it to `""`)
+in `_config.yml`. Commit the changes and after a while you should see your
+website at `https://yourusername.github.io`.
 
-Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
+## How to run locally
 
-You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
+You can use Docker to run the website to avoid installing any dependencies to
+your local environment. To do so, run:
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
-
-More specifically, the created site:
-
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
-
-Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
-
-### Use RubyGems
-
-Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "just-the-docs"
+```shell
+docker-compose up --build
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Alternatively, you can run the website locally by installing the dependencies:
 
-```yaml
-theme: just-the-docs
+```shell
+./scripts/install
 ```
 
-And then execute:
+And then start serving the website:
 
-    $ bundle
+```shell
+./scripts/serve
+```
 
-Or install it yourself as:
+## Documentation
 
-    $ gem install just-the-docs
+The theme contains documentation in the form of
+[blog posts](https://le4ker.github.io/personal-jekyll-theme/blog/index.html).
 
-Alternatively, you can run it inside Docker while developing your site
+## Features
 
-    $ docker-compose up
+- Fork of [Timeline](https://github.com/kirbyt/timeline-jekyll-theme) (mashup of
+  [Grayscale by Start Bootstrap](https://github.com/IronSummitMedia/startbootstrap-grayscale)
+  and [Agency Jekyll Theme](https://github.com/y7kim/agency-jekyll-theme))
+  - Modern and minimal design
+    - Responsive templates for home page, blog archive and posts. Looks great on
+      mobile, tablet, and desktop devices
+    - Sweet animations
+    - Gracefully degrades in older browsers. Compatible with Internet Explorer
+      8+ and all modern browsers
+  - Timeline
+    - Tell your story so far with a sleek timeline of dates, pictures and
+      descriptions
+  - White on black text, making the reading experience tireless
+  - Google analytics
+- Customization and full control of your website and blog through the site
+  config
+- Customization of the website's coloring
+- Blogging functionality
+  - Preview of the latest post in the home page
+  - Archive page
+  - Syntax highlighting
+  - Emojis
+  - Hashtags
+  - Categories
+  - Disqus comments
+  - Bootstrap share buttons
+  - RSS feed
+- Author blurb under the posts
+- 404 page
+- iOS and Android Web App mode
+- Protection from email harvesting
+- Sitemap
+- Travis CI integration with
+  [html-proofer](https://github.com/gjtorikian/html-proofer)
 
-## Usage
+## OSS used in { Personal }
 
-[View the documentation][Just the Docs] for usage information.
+One of the reasons { Personal } is real is the following OSS projects:
 
-## Contributing
-
-Bug reports, proposals of new features, and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-### Submitting code changes:
-
-- Submit an [Issue](https://github.com/just-the-docs/just-the-docs/issues) that motivates the changes, using the appropriate template
-- Discuss the proposed changes with other users and the maintainers
-- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
-- Ensure all CI tests pass
-- Provide instructions to check the effect of the changes
-- Await code review
-
-### Design and development principles of this theme:
-
-1. As few dependencies as possible
-2. No build script needed
-3. First class mobile experience
-4. Make the content shine
-
-## Development
-
-To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
-
-A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
-
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When this theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be included in the gem.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
-[Just the Docs]: https://just-the-docs.com
-[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
-[GitHub Pages]: https://pages.github.com/
-[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
+1. [Grayscale](http://startbootstrap.com/template-overviews/grayscale/)
+2. [highlightjs](https://highlightjs.org/)
+3. [RRSSB](https://github.com/kni-labs/rrssb)
+4. [Timeline](https://github.com/kirbyt/timeline-jekyll-theme)
+5. [typed.js](https://github.com/mattboldt/typed.js/)
