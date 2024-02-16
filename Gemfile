@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-gem "dotenv"
-gem "github-pages"
-gem "jekyll"
-gem "jekyll-github-metadata"
+gem "jekyll", "~> 3.9.0"
+gem "github-pages", "~> 214"
 
 gem "webrick", "~> 1.8"
